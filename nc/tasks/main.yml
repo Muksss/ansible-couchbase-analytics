@@ -1,0 +1,8 @@
+---
+# tasks file for nc
+- name: Start NC Service
+  shell: >
+    nohup {{ cbas_installdir }}/cbas/bin/cbasncservice -logdir {{ cbas_logdir }} < /dev/null > {{ cbas_logdir }}/ncservice.log 2>&1 &
+  when: "not 'NCService' in jps_output.stdout"
+
+

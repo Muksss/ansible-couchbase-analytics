@@ -1,0 +1,21 @@
+---
+- name: Create cbas working directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ cbas_logdir }}"
+    - "{{ cbas_installdir }}"
+    - "{{ cbas_confdir }}"
+
+- name: Download and unpack Couchbase Analytics Service (CBAS)
+  unarchive:
+    src: couchbase-analytics-{{ cbas_version }}-generic.zip
+    dest: "{{ cbas_installdir }}"
+    creates: "{{ cbas_installdir }}/cbas/bin/cbasncservice"
+
+- name: Check cbas processes
+  shell: jps
+  register: jps_output
+
+

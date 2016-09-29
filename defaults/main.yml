@@ -1,0 +1,7 @@
+---
+# defaults file for cbas
+cbas_version: 1.0.0-200
+cbas_basedir: cbas
+cbas_logdir: "{{ cbas_basedir }}/logs"
+cbas_installdir: "{{ cbas_basedir }}/install"
+cbas_confdir: "{{ cbas_basedir }}/conf"

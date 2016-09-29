@@ -1,0 +1,52 @@
+galaxy_info:
+  author: Chris Hillery
+  description: An Ansible role for installing Couchbase Analytics Service (CBAS).
+  company: Couchbase
+
+  license: Apache
+
+  min_ansible_version: 1.2
+
+  platforms:
+  - name: EL
+    versions:
+    - all
+  - name: GenericUNIX
+    versions:
+    - all
+  - name: OpenBSD
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: opensuse
+    versions:
+    - all
+  #- name: MacOSX
+  #  versions:
+  #  - all
+  - name: Solaris
+    versions:
+    - all
+  #- name: Windows
+  #  versions:
+  #  - all
+  #  - 2012R2
+  - name: Ubuntu
+    versions:
+    - all
+  - name: GenericLinux
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+
+  galaxy_tags:
+  - cbas
+  - bigdata
+  - couchbase
+
+dependencies: []
+
