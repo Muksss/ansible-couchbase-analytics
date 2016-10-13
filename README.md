@@ -1,7 +1,7 @@
 couchbaselabs.cbas
 =========
 
-Couchbase Analytics Service (CBAS)
+NoSQL Analytics Service for Couchbase
 
 Requirements
 ------------

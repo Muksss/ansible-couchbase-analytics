@@ -8,7 +8,7 @@
     - "{{ cbas_installdir }}"
     - "{{ cbas_confdir }}"
 
-- name: Download and unpack Couchbase Analytics Service (CBAS)
+- name: Download and unpack NoSQL Analytics Service for Couchbase
   unarchive:
     src: couchbase-analytics-{{ cbas_version }}-generic.zip
     dest: "{{ cbas_installdir }}"

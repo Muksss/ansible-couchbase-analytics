@@ -1,6 +1,6 @@
 galaxy_info:
   author: Chris Hillery
-  description: An Ansible role for installing Couchbase Analytics Service (CBAS).
+  description: An Ansible role for installing NoSQL Analytics Service for Couchbase.
   company: Couchbase
 
   license: Apache
