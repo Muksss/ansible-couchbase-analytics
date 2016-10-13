@@ -1,13 +1,13 @@
 ---
 # tasks file for cc
-- name: Download cbas config file
+- name: Download analytics config file
   template:
-    src: cbas.conf
-    dest: "{{ cbas_confdir }}"
+    src: analytics.conf
+    dest: "{{ analytics_confdir }}"
   changed_when: False
   
 - name: Start CC
   shell: >
-    nohup {{ cbas_installdir }}/cbas/bin/cbascc -config-file {{ cbas_confdir }}/cbas.conf < /dev/null > {{ cbas_logdir }}/cc.log 2>&1 &
+    nohup {{ analytics_installdir }}/cbas/bin/cbascc -config-file {{ analytics_confdir }}/analytics.conf < /dev/null > {{ analytics_logdir }}/cc.log 2>&1 &
   when: "not 'CCDriver' in jps_output.stdout"
 

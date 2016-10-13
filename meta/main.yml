@@ -44,7 +44,7 @@ galaxy_info:
     - all
 
   galaxy_tags:
-  - cbas
+  - analytics
   - bigdata
   - couchbase
 

@@ -1,7 +1,7 @@
 ---
-# defaults file for cbas
-cbas_version: 1.0.0-200
-cbas_basedir: cbas
-cbas_logdir: "{{ cbas_basedir }}/logs"
-cbas_installdir: "{{ cbas_basedir }}/install"
-cbas_confdir: "{{ cbas_basedir }}/conf"
+# defaults file for analytics
+analytics_version: 1.0.0-200
+analytics_basedir: analytics
+analytics_logdir: "{{ analytics_basedir }}/logs"
+analytics_installdir: "{{ analytics_basedir }}/install"
+analytics_confdir: "{{ analytics_basedir }}/conf"

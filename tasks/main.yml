@@ -1,20 +1,20 @@
 ---
-- name: Create cbas working directories
+- name: Create analytics working directories
   file:
     path: "{{ item }}"
     state: directory
   with_items:
-    - "{{ cbas_logdir }}"
-    - "{{ cbas_installdir }}"
-    - "{{ cbas_confdir }}"
+    - "{{ analytics_logdir }}"
+    - "{{ analytics_installdir }}"
+    - "{{ analytics_confdir }}"
 
 - name: Download and unpack NoSQL Analytics Service for Couchbase
   unarchive:
     src: couchbase-analytics-{{ cbas_version }}-generic.zip
-    dest: "{{ cbas_installdir }}"
-    creates: "{{ cbas_installdir }}/cbas/bin/cbasncservice"
+    dest: "{{ analytics_installdir }}"
+    creates: "{{ analytics_installdir }}/cbas/bin/cbasncservice"
 
-- name: Check cbas processes
+- name: Check analytics processes
   shell: jps
   register: jps_output
 

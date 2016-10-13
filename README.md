@@ -1,4 +1,4 @@
-couchbaselabs.cbas
+couchbaselabs.analytics
 =========
 
 NoSQL Analytics Service for Couchbase
@@ -11,11 +11,11 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-cbas_version
-cbas_basedir
-cbas_confdir
-cbas_logdir
-cbas_installdir
+analytics_version
+analytics_basedir
+analytics_confdir
+analytics_logdir
+analytics_installdir
 
 Dependencies
 ------------
