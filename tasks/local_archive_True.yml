@@ -1,0 +1,7 @@
+---
+- name: Download and unpack NoSQL Analytics Service for Couchbase {{ analytics_version }}
+  unarchive:
+    src: couchbase-analytics-{{ analytics_version }}-generic.zip
+    dest: "{{ analytics_installdir }}"
+    creates: "{{ analytics_installdir }}/cbas/bin/cbasncservice"
+

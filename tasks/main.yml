@@ -8,14 +8,14 @@
     - "{{ analytics_installdir }}"
     - "{{ analytics_confdir }}"
 
-- name: Download and unpack NoSQL Analytics Service for Couchbase
-  unarchive:
-    src: couchbase-analytics-{{ cbas_version }}-generic.zip
-    dest: "{{ analytics_installdir }}"
-    creates: "{{ analytics_installdir }}/cbas/bin/cbasncservice"
+- name: Check for local installation archive
+  local_action: stat path=couchbase-analytics-{{ analytics_version }}-generic.zip
+  register: local_archive
+  become: no
+
+- include: local_archive_{{ local_archive.stat.exists }}.yml
 
 - name: Check analytics processes
   shell: jps
   register: jps_output
-
 
